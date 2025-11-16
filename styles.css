@@ -1,0 +1,14 @@
+body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-warning-light {
+            background-color: #fff3cd;
+        }
+        #header-logo img {
+            width: 32px;
+            height: 32px;
+        }
+        #footer-logo img {
+            width: 28px;
+            height: 28px;
+        }

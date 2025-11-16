@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LemonLearning - Học từ vựng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="#" id="header-logo">
+                    <img src="/publics/logo/LEMON.ico" alt="Lemon Logo" class="me-2">LemonLearning</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bộ từ vựng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-lg-auto">
+                        <button class="btn btn-light me-2" type="button">Đăng nhập</button>
+                        <button class="btn btn-warning" type="button">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-warning-light py-5 text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Let's Vocab</h1>
+                <p class="lead text-muted mb-4">
+                    Công cụ tìm kiếm từ vựng chuyên sâu, flashcard thông minh và blog học tiếng Anh.
+                </p>
+                <div class="input-group input-group-lg mb-3 mx-auto shadow-sm" style="max-width: 600px;">
+                    <input type="text" id="search-input" class="form-control" placeholder="Nhập từ để tìm kiếm..." />
+                    <button class="btn btn-warning" type="button" id="search-button">
+                        <i class="bi bi-search"></i> Tìm
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="card shadow-sm p-4 h-100" id="word-details-container">
+                            <div class="text-center d-flex flex-column justify-content-center align-items-center h-100">
+                                <img src="https://placehold.co/150x150/fffaf0/f59e0b?text=Tìm!" class="rounded-circle" alt="anhtapthoi">
+                                <h4 class="mt-3 text-muted">Tìm từ để học bạn nhé</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column gap-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-warning">Flashcard</h5>
+                                    
+                                    <div class="card bg-light text-center my-3" style="height: 150px; cursor: pointer;" id="flashcard-display">
+                                        <div class="card-body d-flex align-items-center justify-content-center">
+                                            <h4 class="m-0 text-muted" id="flashcard-text">Chưa có từ nào</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button class="btn btn-outline-secondary" id="flashcard-prev">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </button>
+                                        
+                                        <span class="text-muted small" id="flashcard-counter">0/0</span>
+
+                                        <button class="btn btn-outline-secondary" id="flashcard-next">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bài viết mới</h5>
+                                    
+                                    <div class="d-flex mb-3 border-bottom pb-3">
+                                        <img src="https://placehold.co/80x80/fffaf0/f59e0b?text=Blog" class="rounded me-3" alt="Blog post image">
+                                        <div>
+                                            <h6 class="mb-1"><a href="#" class="text-dark text-decoration-none">5 Mẹo học từ vựng siêu tốc</a></h6>
+                                            <p class="card-text text-muted small">Cách ghi nhớ từ vựng hiệu quả mà không cần tốn nhiều...</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <img src="https://placehold.co/80x80/fffaf0/f59e0b?text=Blog" class="rounded me-3" alt="Blog post image">
+                                        <div>
+                                            <h6 class="mb-1"><a href="#" class="text-dark text-decoration-none">Phân biệt 'Say', 'Tell', 'Speak'</a></h6>
+                                            <p class="card-text text-muted small">Ba từ thường gặp nhưng dễ gây nhầm lẫn. Hãy cùng tìm hiểu...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white p-4 mt-4 border-top">
+        <div class="container">
+            <div class="row gy-3 align-items-center">
+                <div class="col-md-4 d-flex align-items-center" id="footer-logo">
+                    <img src="/publics/logo/LEMON.ico" alt="Lemon Logo" class="me-2">
+                    <span class="fs-5 text-muted">LemonLearning</span>
+                </div>
+                <div class="col-md-4 text-md-center">
+                    <p class="mb-1 small text-muted"><strong>Email:</strong> lemonlearning@gmail.com</p>
+                    <p class="mb-0 small text-muted"><strong>Địa chỉ:</strong> 222 Giải Phóng, Hà Nội</p>
+                </div>
+                <div class="col-md-4 text-md-end fs-4">
+                    <a href="#" class="text-secondary ms-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-secondary ms-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-secondary ms-3"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="/scripts.js"></script>
+</body>
+</html>
