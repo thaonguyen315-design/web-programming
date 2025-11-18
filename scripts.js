@@ -87,15 +87,15 @@ function showingWordDetails(data) {
             var result = data.results[i];
             def.push({
                 pos: result.partOfSpeech || 'N/A',
-                nghia: result.definition || 'Không có định nghĩa',
-                vd: result.examples ? result.examples[0] : 'Không có ví dụ'
+                nghia: result.definition || 'No definition available',
+                vd: result.examples ? result.examples[0] : 'No examples available'
             });
         }
     } else {
         def.push({
             pos: 'N/A',
-            nghia: 'Không có định nghĩa',
-            vd: 'Không có ví dụ'
+            nghia: 'No definition available',
+            vd: 'No examples available'
         });
     }
 
@@ -119,7 +119,7 @@ function showingWordDetails(data) {
             htmlSym += `<span class="badge bg-light text-dark me-1">${sym[i]}</span>`;
         }
     } else {
-        htmlSym = '<span class="text-muted small">Không có.</span>';
+        htmlSym = '<span class="text-muted small">Not available</span>';
     }
 
     var htmlAnto = '';
@@ -128,7 +128,7 @@ function showingWordDetails(data) {
             htmlAnto += `<span class="badge bg-light text-dark me-1">${anto[i]}</span>`;
         }
     } else {
-        htmlAnto = '<span class="text-muted small">Không có.</span>';
+        htmlAnto = '<span class="text-muted small">Not available</span>';
     }
 
     var firstMeaning = def[0].nghia;
@@ -204,7 +204,7 @@ function updateFlashcard() {
     var currentWord = myWords[currentIndex];
 
     if (meaning) {
-        flashcardText.innerHTML = currentWord.meaning;
+        flashcardText.innerHTML = '<small>'+ currentWord.meaning + '<small>';
     } else {
         flashcardText.textContent = currentWord.word;
     }
